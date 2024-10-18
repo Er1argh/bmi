@@ -24,7 +24,7 @@
 
 1. Склонируйте репозиторий:
    ```bash
-   git clone https://github.com/ваш-профиль/ваш-репозиторий.git
+   git clone https://github.com/Er1argh/bmi.git
    ```
 2. Создайте директорию для сборки и перейдите в неё:
    ```bash

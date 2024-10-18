@@ -47,7 +47,7 @@
 
 1. Скачайте или склонируйте проект:
    ```bash
-   git clone https://github.com/ваш-профиль/ваш-репозиторий.git
+   git clone https://github.com/Er1argh/bmi.git
    ```
 2. Откройте проект в QtCreator.
 3. Постройте и запустите проект с помощью комбинации клавиш Ctrl + R или Ctrl + Shift + B.

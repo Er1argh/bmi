@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BodyMetrics</class>
+ <widget class="QMainWindow" name="BodyMetrics">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>510</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Здоровье в цифрах</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/main/img/logo.jpg</normaloff>:/main/img/logo.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+    font-family: century gothic;
+    font-size: 24px;
+}
+
+#BodyMetrics {
+    background: url(:/main/img/bg.jpg);
+}
+
+#ResultForm {
+    background: #f2d6e1; 
+}
+
+#bodyMetricsFrame {
+	background-color: rgba(51, 51, 51, 0.8);
+	border-radius: 15px;
+}
+
+#resultFormFrame  {
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+#titleLable,
+#heightLabel,
+#weightLabel,
+#ageLabel,
+#bmiLabel,
+#bmiOutput,
+#bmrLabel,
+#bmrOutput,
+#carbsLabel,
+#carbsOutput,
+#fatsLabel,
+#fatsOutput,
+#proteinsLabel,
+#proteinsOutput {
+    color: white;
+    background: transparent;
+}
+
+#BodyMetrics QLineEdit {
+	color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #717072;
+    padding: 5px;
+}
+
+#BodyMetrics QLineEdit:focus {
+    border-bottom: 2px solid #49ebff;
+}
+
+#calculateButton,
+#closeButton {
+    color: white;
+    background: #913754;
+    border-radius: 15px;
+}
+
+#calculateButton:hover,
+#closeButton:hover {
+    color: #333;
+    background: #49ebff;
+    border-radius: 15px;
+}
+
+#calculateButton:pressed,
+#closeButton:pressed {
+    background: #713040;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="bodyMetricsFrame">
+    <property name="geometry">
+     <rect>
+      <x>29</x>
+      <y>29</y>
+      <width>451</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="titleLable">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>400</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>century gothic</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Калькулятор ИМТ и норм КБЖУ</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="calculateButton">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>370</y>
+       <width>240</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Рассчитать</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>70</y>
+       <width>311</width>
+       <height>259</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="heightLabel">
+          <property name="text">
+           <string>Рост (см):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="heightInput">
+          <property name="placeholderText">
+           <string>Введите ваш рост</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="weightLabel">
+          <property name="text">
+           <string>Вес (кг):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="weightInput">
+          <property name="placeholderText">
+           <string>Введите ваш вес</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="ageLabel">
+          <property name="text">
+           <string>Возраст (лет):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ageInput">
+          <property name="placeholderText">
+           <string>Введите ваш возраст</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
